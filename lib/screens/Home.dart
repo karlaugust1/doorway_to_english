@@ -44,18 +44,21 @@ class Home extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 8.0),
-                    child: Container(
-                      height: 180,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).cardColor,
-                        borderRadius: BorderRadius.all(Radius.circular(4)),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Center(
-                          child: Icon(
-                            Icons.play_arrow,
-                            size: 64,
+                    child: GestureDetector(
+                      onTap: () => Navigator.of(context).pushNamed("/video"),
+                      child: Container(
+                        height: 180,
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).cardColor,
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Center(
+                            child: Icon(
+                              Icons.play_arrow,
+                              size: 64,
+                            ),
                           ),
                         ),
                       ),

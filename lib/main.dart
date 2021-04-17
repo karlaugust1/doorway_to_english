@@ -1,6 +1,7 @@
 import 'package:doorway_to_english/components/Menu.dart';
 import 'package:doorway_to_english/screens/Home.dart';
 import 'package:doorway_to_english/screens/TestPage.dart';
+import 'package:doorway_to_english/screens/Video.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -44,6 +45,7 @@ class BaseApp extends StatelessWidget {
     return {
       '/menu': (context) => Menu(),
       '/home': (context) => Home(),
+      '/video': (context) => Video(),
       '/test': (context) => TestPage(),
     };
   }

@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 
 class BaseScaffoldApp extends StatelessWidget {
   final Widget body;
+  final bool scroll;
 
-  BaseScaffoldApp({@required this.body});
+  BaseScaffoldApp({
+    @required this.body,
+    this.scroll = true,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
-        // physics: AlwaysScrollableScrollPhysics(), // : NeverScrollableScrollPhysics(),
+        physics: this.scroll ? AlwaysScrollableScrollPhysics() : NeverScrollableScrollPhysics(),
         slivers: [
           CustomSliverAppBar(),
           SliverList(
