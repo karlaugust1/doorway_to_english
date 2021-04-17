@@ -72,6 +72,15 @@ class Menu extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
                     child: Text(
+                      "Settings",
+                      style: TextStyle(
+                        fontSize: 24.0,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: Text(
                       "Logout",
                       style: TextStyle(
                         fontSize: 24.0,
