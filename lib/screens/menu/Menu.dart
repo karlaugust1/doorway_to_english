@@ -1,11 +1,11 @@
-import 'package:doorway_to_english/components/MenuAppBar.dart';
+import 'package:doorway_to_english/screens/menu/components/MenuAppBar.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: MenuAppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,10 +24,6 @@ class Menu extends StatelessWidget {
               ),
             ),
             Container(
-              // width: 500,
-              // decoration: BoxDecoration(
-              //   border: Border.all(color: Colors.red, width: 1)
-              // ),
               child: Column(
                 children: [
                   GestureDetector(
@@ -91,9 +87,6 @@ class Menu extends StatelessWidget {
               ),
             ),
             Container(
-              // decoration: BoxDecoration(
-              //     border: Border.all(color: Colors.red, width: 1)
-              // ),
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
                 child: Column(
@@ -101,14 +94,14 @@ class Menu extends StatelessWidget {
                     Text(
                       "Made with ♥️ by Karl",
                       style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 14.0,
                       ),
                     ),
                     Text(
-                      "Contact the developer",
+                      "Contact me",
                       style: TextStyle(
                         decoration: TextDecoration.underline,
-                        fontSize: 16.0,
+                        fontSize: 12.0,
                       ),
                     ),
                   ],
@@ -126,10 +119,3 @@ class Menu extends StatelessWidget {
     Navigator.of(context).popAndPushNamed("/home");
   }
 }
-
-// ListView(
-//   children: [
-//
-//
-//   ],
-// )

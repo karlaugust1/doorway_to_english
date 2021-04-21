@@ -1,4 +1,4 @@
-import 'package:doorway_to_english/components/CustomAppBar.dart';
+import 'package:doorway_to_english/common/components/CustomAppBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

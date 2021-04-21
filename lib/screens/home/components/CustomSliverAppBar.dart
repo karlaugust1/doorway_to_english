@@ -9,7 +9,6 @@ class CustomSliverAppBar extends StatelessWidget with PreferredSizeWidget {
       floating: true,
       backgroundColor: Colors.transparent,
       elevation: 0.0,
-      expandedHeight: 56,
       leading: IconButton(
         onPressed: () {},
         icon: Image(

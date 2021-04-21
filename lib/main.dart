@@ -1,7 +1,6 @@
-import 'package:doorway_to_english/screens/Menu.dart';
-import 'package:doorway_to_english/screens/Home.dart';
-import 'package:doorway_to_english/screens/TestPage.dart';
-import 'package:doorway_to_english/screens/Video.dart';
+import 'package:doorway_to_english/screens/menu/Menu.dart';
+import 'package:doorway_to_english/screens/home/Home.dart';
+import 'package:doorway_to_english/screens/video/Video.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -46,7 +45,6 @@ class BaseApp extends StatelessWidget {
       '/menu': (context) => Menu(),
       '/home': (context) => Home(),
       '/video': (context) => Video(),
-      '/test': (context) => TestPage(),
     };
   }
 }

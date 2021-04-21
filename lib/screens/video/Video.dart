@@ -1,4 +1,4 @@
-import 'package:doorway_to_english/components/BaseScaffold.dart';
+import 'package:doorway_to_english/common/components/BaseScaffold.dart';
 import 'package:flutter/material.dart';
 
 class Video extends StatefulWidget {
