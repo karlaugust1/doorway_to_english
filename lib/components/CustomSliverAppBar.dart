@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomSliverAppBar extends StatelessWidget {
+class CustomSliverAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
@@ -30,4 +30,7 @@ class CustomSliverAppBar extends StatelessWidget {
       ],
     );
   }
+
+  @override
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }

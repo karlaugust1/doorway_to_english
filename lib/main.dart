@@ -1,4 +1,4 @@
-import 'package:doorway_to_english/components/Menu.dart';
+import 'package:doorway_to_english/screens/Menu.dart';
 import 'package:doorway_to_english/screens/Home.dart';
 import 'package:doorway_to_english/screens/TestPage.dart';
 import 'package:doorway_to_english/screens/Video.dart';
