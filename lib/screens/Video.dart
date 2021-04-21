@@ -9,8 +9,8 @@ class Video extends StatefulWidget {
 class _VideoState extends State<Video> {
   final TextEditingController _valueController = TextEditingController();
   String favoriteIcon = "heart";
-  int _question1 = 1;
-  bool _question2 = true;
+  int? _question1 = 1;
+  bool? _question2 = true;
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +126,7 @@ class _VideoState extends State<Video> {
                       title: Text('Yes'),
                       value: 1,
                       groupValue: _question1,
-                      onChanged: (int value) {
+                      onChanged: (int? value) {
                         setState(() {
                           _question1 = value;
                         });
@@ -137,7 +137,7 @@ class _VideoState extends State<Video> {
                       title: Text('No'),
                       value: 2,
                       groupValue: _question1,
-                      onChanged: (int value) {
+                      onChanged: (int? value) {
                         setState(() {
                           _question1 = value;
                         });
@@ -162,9 +162,9 @@ class _VideoState extends State<Video> {
                       activeColor: Theme.of(context).accentColor,
                       title: Text('Yes'),
                       value: _question2,
-                      onChanged: (bool value) {
+                      onChanged: (bool? value) {
                         setState(() {
-                          _question2 = !_question2;
+                          _question2 = !_question2!;
                         });
                       },
                     ),
@@ -173,7 +173,7 @@ class _VideoState extends State<Video> {
                       activeColor: Theme.of(context).accentColor,
                       title: Text('No'),
                       value: false,
-                      onChanged: (bool value) {
+                      onChanged: (bool? value) {
                         setState(() {
                           _question2 = value;
                         });
@@ -222,8 +222,10 @@ class _VideoState extends State<Video> {
                     child: SizedBox(
                       width: 200,
                       height: 50,
-                      child: RaisedButton(
-                        color: Theme.of(context).accentColor,
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(Theme.of(context).accentColor)
+                        ),
                         onPressed: () {},
                         child: Text(
                           "SUBMIT",

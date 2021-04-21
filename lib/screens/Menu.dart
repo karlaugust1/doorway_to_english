@@ -121,7 +121,7 @@ class Menu extends StatelessWidget {
     );
   }
 
-  Future<void> _pushToScreenOrPop(BuildContext context) {
+  Future<void> _pushToScreenOrPop(BuildContext context) async {
     Navigator.of(context).pop();
     Navigator.of(context).popAndPushNamed("/home");
   }

@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BaseScaffold extends StatelessWidget {
-  final Widget body;
+  final Widget? body;
 
   BaseScaffold({ this.body});
 
