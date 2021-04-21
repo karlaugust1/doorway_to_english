@@ -1,4 +1,4 @@
-import 'package:doorway_to_english/screens/menu/components/MenuAppBar.dart';
+import 'package:doorway_to_english/screens/menu/components/menu_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
@@ -27,7 +27,7 @@ class Menu extends StatelessWidget {
               child: Column(
                 children: [
                   GestureDetector(
-                    onTap: () => _pushToScreenOrPop(context),
+                    onTap: () => _pushToScreenOrPop(context, "home"),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Text(
@@ -47,12 +47,15 @@ class Menu extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: Text(
-                      "Videos",
-                      style: TextStyle(
-                        fontSize: 24.0,
+                  GestureDetector(
+                    onTap: () => _pushToScreenOrPop(context, "video"),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: Text(
+                        "Videos",
+                        style: TextStyle(
+                          fontSize: 24.0,
+                        ),
                       ),
                     ),
                   ),
@@ -74,12 +77,15 @@ class Menu extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: Text(
-                      "Logout",
-                      style: TextStyle(
-                        fontSize: 24.0,
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).pushNamedAndRemoveUntil('/login', (Route<dynamic> route) => false),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: Text(
+                        "Logout",
+                        style: TextStyle(
+                          fontSize: 24.0,
+                        ),
                       ),
                     ),
                   ),
@@ -114,8 +120,9 @@ class Menu extends StatelessWidget {
     );
   }
 
-  Future<void> _pushToScreenOrPop(BuildContext context) async {
-    Navigator.of(context).pop();
-    Navigator.of(context).popAndPushNamed("/home");
+  Future<void> _pushToScreenOrPop(BuildContext context, String routeName) async {
+    // Navigator.of(context).pop();
+    Navigator.of(context).popAndPushNamed("/$routeName");
+    // Navigator.of(context).pushNamedAndRemoveUntil('/$routeName', (Route<dynamic> route) => false);
   }
 }

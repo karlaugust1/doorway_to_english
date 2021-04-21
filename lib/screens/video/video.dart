@@ -1,4 +1,5 @@
-import 'package:doorway_to_english/common/components/BaseScaffold.dart';
+import 'package:doorway_to_english/common/components/base_scaffold_page.dart';
+import 'package:doorway_to_english/common/components/text_input_field.dart';
 import 'package:flutter/material.dart';
 
 class Video extends StatefulWidget {
@@ -14,7 +15,7 @@ class _VideoState extends State<Video> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScaffold(
+    return BaseScaffoldPage(
         body: Column(
       children: [
         Hero(
@@ -193,27 +194,30 @@ class _VideoState extends State<Video> {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                  child: TextField(
-                    controller: _valueController,
-                    decoration: const InputDecoration(
-                      hintText: 'Type here...',
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                        borderSide: BorderSide(color: Color(0xff282828)),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                        borderSide: BorderSide(color: Color(0xff282828)),
-                      ),
-                      fillColor: Color(0xff282828),
-                      filled: true,
-                    ),
-                    style: TextStyle(
-                      fontSize: 16,
-                    ),
+                  // child: TextField(
+                  //   controller: _valueController,
+                  //   decoration: const InputDecoration(
+                  //     hintText: 'Type here...',
+                  //     enabledBorder: OutlineInputBorder(
+                  //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                  //       borderSide: BorderSide(color: Color(0xff282828)),
+                  //     ),
+                  //     focusedBorder: OutlineInputBorder(
+                  //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                  //       borderSide: BorderSide(color: Color(0xff282828)),
+                  //     ),
+                  //     fillColor: Color(0xff282828),
+                  //     filled: true,
+                  //   ),
+                  //   style: TextStyle(
+                  //     fontSize: 16,
+                  //   ),
+                  //   maxLines: null,
+                  //   // decoration: InputDecoration(labelText: 'Value'),
+                  //   keyboardType: TextInputType.text,
+                  // ),
+                  child: TextInputField(
                     maxLines: null,
-                    // decoration: InputDecoration(labelText: 'Value'),
-                    keyboardType: TextInputType.text,
                   ),
                 ),
                 Padding(

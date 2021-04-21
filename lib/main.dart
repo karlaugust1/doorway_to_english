@@ -1,6 +1,7 @@
-import 'package:doorway_to_english/screens/menu/Menu.dart';
-import 'package:doorway_to_english/screens/home/Home.dart';
-import 'package:doorway_to_english/screens/video/Video.dart';
+import 'package:doorway_to_english/screens/login/login.dart';
+import 'package:doorway_to_english/screens/menu/menu.dart';
+import 'package:doorway_to_english/screens/home/home.dart';
+import 'package:doorway_to_english/screens/video/video.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -19,7 +20,7 @@ class BaseApp extends StatelessWidget {
       routes: _buildRoutes(),
       debugShowCheckedModeBanner: false,
       theme: _buildThemeData(),
-      home: Home(),
+      home: Login(),
     );
   }
 
@@ -45,6 +46,7 @@ class BaseApp extends StatelessWidget {
       '/menu': (context) => Menu(),
       '/home': (context) => Home(),
       '/video': (context) => Video(),
+      '/login': (context) => Login(),
     };
   }
 }

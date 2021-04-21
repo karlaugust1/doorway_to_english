@@ -1,11 +1,11 @@
-import 'package:doorway_to_english/common/components/CustomAppBar.dart';
+import 'package:doorway_to_english/common/components/custom_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class BaseScaffold extends StatelessWidget {
-  final Widget? body;
+class BaseScaffoldPage extends StatelessWidget {
+  final Widget body;
 
-  BaseScaffold({ this.body});
+  BaseScaffoldPage({ required this.body});
 
   @override
   Widget build(BuildContext context) {

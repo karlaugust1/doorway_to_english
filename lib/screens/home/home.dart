@@ -1,4 +1,4 @@
-import 'package:doorway_to_english/screens/home/components/CustomSliverAppBar.dart';
+import 'package:doorway_to_english/screens/home/components/custom_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
